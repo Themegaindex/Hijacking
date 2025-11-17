@@ -52,6 +52,30 @@ python main.py \
 python main.py --goal "YOUR_GOAL_DESCRIPTION"
 ```
 
+## 🔧 Offline Testing Mode (No API Key Required)
+
+Generate adversarial prompts without API calls for manual testing:
+
+```bash
+# Generate prompts for a specific goal
+python offline_test.py --goal "YOUR_TEST_GOAL"
+
+# Generate only a specific stream (1-2)
+python offline_test.py --goal "YOUR_TEST_GOAL" --stream 1
+
+# Different output formats
+python offline_test.py --goal "YOUR_TEST_GOAL" --output-format markdown
+python offline_test.py --goal "YOUR_TEST_GOAL" --output-format prompts-only
+```
+
+This mode generates copy-pasteable prompts that you can test manually on:
+- Claude.ai (Projects with custom system prompts)
+- OpenAI Playground
+- Anthropic API Console
+- Any LLM interface that supports system prompts
+
+**No API keys needed** - perfect for quick testing and experimentation!
+
 ❤️ Acknowledgments
 
 This implementation builds on PAIR (Prompt Automatic Iterative Refinement) by Patrick Chao et al.
